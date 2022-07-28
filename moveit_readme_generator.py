@@ -132,4 +132,5 @@ for row in values:
         f.write(item)
         f.write(" |")
 
+f.write("\n")
 f.close()
