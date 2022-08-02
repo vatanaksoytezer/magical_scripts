@@ -1,7 +1,5 @@
 #! /usr/bin/python3
 
-from pytablewriter import MarkdownTableWriter
-
 packages = [
     "moveit",
     "moveit_ros",
@@ -110,12 +108,6 @@ for package_no in range(len(packages)):
                     str = "N/A"
             row.append(str)
     values.append(row)
-
-writer = MarkdownTableWriter(
-    table_name="MoveIt 2 Buildfarm Status",
-    headers=headers,
-    value_matrix=[values],
-)
 
 f = open("moveit.md", "w")  # write in text mode
 f.write("|")
